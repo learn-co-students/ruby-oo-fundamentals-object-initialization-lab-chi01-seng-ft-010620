@@ -1,24 +1,19 @@
 require 'pry'
 
 class Dog
-    def initialize(name,breed = "Mutt")
+
+    attr_accessor :size, :name, :breed
+
+    def initialize(name, breed = "Mutt", size="medium")
         @name = name
         @breed = breed
-    end
-
-    def name=(name)
-        @name
-    end
-    def name
-        @name
-    end
-
-    def breed=(breed)
-        @breed
-    end
-
-    def breed
-        @breed
-    end
+        @size = size
+    end 
 
 end
+
+# name and breed=mutt
+
+dog = Dog.new("donald", "husky", 'small')
+dog.size = "small"
+p dog
